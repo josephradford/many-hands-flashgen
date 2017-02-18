@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    flashroutineobject.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    flashroutineobject.h
 
 FORMS    += mainwindow.ui
