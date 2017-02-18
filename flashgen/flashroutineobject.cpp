@@ -33,11 +33,11 @@ void FlashRoutines::startKeyPress(int key)
     FlashObject flash;
     if (key == Qt::Key_A) {
         // red on the EL wire
-        flash.channel = 1;
+        flash.channel = 0;
     }
     if (key == Qt::Key_S) {
         // orange on the EL wire
-        flash.channel = 2;
+        flash.channel = 1;
     }
     if (key == Qt::Key_D) {
         // yellow on the EL wire
