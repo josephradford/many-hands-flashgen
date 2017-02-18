@@ -24,7 +24,8 @@ void MainWindow::setRecording(bool recording)
     if (m_recording == recording) {
         return;
     }
-    if (recording) {
+    m_recording = recording;
+    if (m_recording) {
         // start recording
         m_recording = true;
 
