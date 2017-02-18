@@ -25,6 +25,7 @@ public:
     void stopKeyPress();
 
     void clear();
+    void stopRecording();
 private:
     bool m_keyPressed;
     QElapsedTimer *m_timer;

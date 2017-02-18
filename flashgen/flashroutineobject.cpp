@@ -70,6 +70,14 @@ void FlashRoutines::stopKeyPress()
     m_timer->restart();
 }
 
+void FlashRoutines::stopRecording()
+{
+    // set last pause to zero (it is irrelevant)
+    if (flashes.count()) {
+        flashes.last().pause = 0;
+    }
+}
+
 void FlashRoutines::clear()
 {
     flashes.clear();
