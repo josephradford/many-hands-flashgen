@@ -84,3 +84,14 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
+
+
+void MainWindow::on_btn_Record_clicked()
+{
+    setRecording(true);
+}
+
+void MainWindow::on_btn_Stop_clicked()
+{
+    setRecording(false);
+}

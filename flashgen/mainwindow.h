@@ -22,6 +22,10 @@ private slots:
 
     void keyPressEvent(QKeyEvent *event);
     void keyReleaseEvent(QKeyEvent *event);
+
+    void on_btn_Record_clicked();
+    void on_btn_Stop_clicked();
+
 private:
     Ui::MainWindow *ui;
 
