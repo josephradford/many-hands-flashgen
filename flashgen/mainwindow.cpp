@@ -36,7 +36,7 @@ void MainWindow::setRecording(bool recording)
     }
     else {
         // finish off the last key
-        m_flashRoutine->stopKeyPress();
+        m_flashRoutine->stopRecording();
     }
 }
 
