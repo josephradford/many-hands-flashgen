@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    m_flashRoutine = new FlashRoutineObject;
+    m_flashRoutine = new FlashRoutines;
     m_recording = false;
 }
 

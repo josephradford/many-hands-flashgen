@@ -2,18 +2,18 @@
 
 #include <QElapsedTimer>
 
-FlashRoutineObject::FlashRoutineObject()
+FlashRoutines::FlashRoutines()
 {
     m_keyPressed = false;
     m_timer = new QElapsedTimer();
 }
 
-FlashRoutineObject::~FlashRoutineObject()
+FlashRoutines::~FlashRoutines()
 {
     delete m_timer;
 }
 
-void FlashRoutineObject::startKeyPress(int key)
+void FlashRoutines::startKeyPress(int key)
 {
     if (m_keyPressed) {
         // stop the current recording
@@ -54,7 +54,7 @@ void FlashRoutineObject::startKeyPress(int key)
     m_keyPressed = true;
 }
 
-void FlashRoutineObject::stopKeyPress()
+void FlashRoutines::stopKeyPress()
 {
     // save the hold time of the current key
     if (m_keyPressed) {
@@ -70,7 +70,7 @@ void FlashRoutineObject::stopKeyPress()
     m_timer->restart();
 }
 
-void FlashRoutineObject::clear()
+void FlashRoutines::clear()
 {
     flashes.clear();
     m_keyPressed = false;

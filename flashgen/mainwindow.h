@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-class FlashRoutineObject;
+class FlashRoutines;
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +29,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    FlashRoutineObject *m_flashRoutine;
+    FlashRoutines *m_flashRoutine;
 
     bool m_recording;
 };

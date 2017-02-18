@@ -13,11 +13,11 @@ struct FlashObject
 };
 
 // stores the flash routine information
-class FlashRoutineObject
+class FlashRoutines
 {
 public:
-    FlashRoutineObject();
-    ~FlashRoutineObject();
+    FlashRoutines();
+    ~FlashRoutines();
 
     QList<FlashObject> flashes;
 
