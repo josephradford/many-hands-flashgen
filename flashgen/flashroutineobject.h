@@ -3,11 +3,10 @@
 
 #include <QList>
 
-class FlashObject
-{
-public:
-    FlashObject();
+class QElapsedTimer;
 
+struct FlashObject
+{
     int channel;
     int hold;
     int pause;
@@ -18,8 +17,17 @@ class FlashRoutineObject
 {
 public:
     FlashRoutineObject();
+    ~FlashRoutineObject();
 
     QList<FlashObject> flashes;
+
+    void startKeyPress(int key);
+    void stopKeyPress();
+
+    void clear();
+private:
+    bool m_keyPressed;
+    QElapsedTimer *m_timer;
 };
 
 #endif // FLASHROUTINEOBJECT_H
