@@ -29,6 +29,9 @@ void MainWindow::setRecording(bool recording)
         // start recording
         m_recording = true;
 
+        // clear out the flash routines, ready for the new one
+        m_flashRoutine->clear();
+
         // wait for first input
     }
 }
