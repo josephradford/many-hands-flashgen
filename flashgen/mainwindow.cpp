@@ -10,10 +10,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     m_flashRoutine = new FlashRoutineObject;
+    m_recording = false;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     delete m_flashRoutine;
+}
+
+void MainWindow::setRecording(bool recording)
+{
+    if (m_recording == recording) {
+        return;
+    }
+    if (recording) {
+        // start recording
+        m_recording = true;
+
+        // wait for first input
+    }
 }
