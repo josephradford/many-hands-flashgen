@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class FlashRoutineObject;
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +19,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    FlashRoutineObject *m_flashRoutine;
 };
 
 #endif // MAINWINDOW_H
