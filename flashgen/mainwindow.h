@@ -21,6 +21,7 @@ private slots:
     void setRecording(bool recording);
 
     void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 private:
     Ui::MainWindow *ui;
 
