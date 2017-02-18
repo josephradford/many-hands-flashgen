@@ -19,45 +19,87 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QFormLayout" name="formLayout_VariableNames">
-        <item row="0" column="0">
+        <item row="3" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
            <string>Flash var name</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
+        <item row="3" column="1">
          <widget class="QLineEdit" name="txt_flashVarName">
           <property name="text">
            <string>flash</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item row="4" column="0">
          <widget class="QLabel" name="label_2">
           <property name="text">
            <string>Flash routine var name</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
+        <item row="4" column="1">
          <widget class="QLineEdit" name="txt_flashRoutineVarName">
           <property name="text">
-           <string>flashRoutine</string>
+           <string>flashRoutines</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="6" column="0">
          <widget class="QLabel" name="label_3">
           <property name="text">
            <string>Flash routine index</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="6" column="1">
          <widget class="QLineEdit" name="txt_flashRoutineIdx">
           <property name="text">
            <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Flash channel var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Flash hold var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Flash pause var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="txt_flashChannelVarName">
+          <property name="text">
+           <string>port</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="txt_flashHoldVarName">
+          <property name="text">
+           <string>hold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="txt_flashPauseVarName">
+          <property name="text">
+           <string>pause</string>
           </property>
          </widget>
         </item>
