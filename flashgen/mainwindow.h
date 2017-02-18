@@ -35,6 +35,7 @@ private:
 
     bool m_recording;
     void updateCode();
+    void setNormalControlsEnabled(bool enabled);
 };
 
 #endif // MAINWINDOW_H

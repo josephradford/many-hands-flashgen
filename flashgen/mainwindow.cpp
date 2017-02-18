@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     m_flashRoutine = new FlashRoutines;
     m_recording = false;
+
+    // bring screen and start button back
+    setNormalControlsEnabled(true);
 }
 
 MainWindow::~MainWindow()
@@ -33,11 +36,17 @@ void MainWindow::setRecording(bool recording)
         m_flashRoutine->clear();
 
         // wait for first input
+
+        // grey out screen
+        setNormalControlsEnabled(false);
     }
     else {
         // finish off the last key
         m_flashRoutine->stopRecording();
         updateCode();
+
+        // bring screen and start button back
+        setNormalControlsEnabled(true);
     }
 }
 
@@ -143,3 +152,19 @@ void MainWindow::updateCode()
     }
 }
 
+void MainWindow::setNormalControlsEnabled(bool enabled) {
+
+    ui->btn_Record->setEnabled(enabled);
+    ui->btn_Refresh->setEnabled(enabled);
+    ui->txt_Output->setEnabled(enabled);
+    ui->formLayout_VariableNames->setEnabled(enabled);
+    ui->txt_flashChannelVarName->setEnabled(enabled);
+    ui->txt_flashHoldVarName->setEnabled(enabled);
+    ui->txt_flashPauseVarName->setEnabled(enabled);
+    ui->txt_flashRoutineIdx->setEnabled(enabled);
+    ui->txt_flashRoutineVarName->setEnabled(enabled);
+    ui->txt_flashVarName->setEnabled(enabled);
+    ui->tableView_Routine->setEnabled(enabled);
+
+    ui->btn_Stop->setEnabled(!enabled);
+}
