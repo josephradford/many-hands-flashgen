@@ -66,6 +66,40 @@
       <item>
        <widget class="QTableView" name="tableView_Routine"/>
       </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="btn_Record">
+          <property name="toolTip">
+           <string>Start recording</string>
+          </property>
+          <property name="text">
+           <string>Record</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_Stop">
+          <property name="toolTip">
+           <string>Stop recording</string>
+          </property>
+          <property name="text">
+           <string>Stop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_Refresh">
+          <property name="toolTip">
+           <string>Refresh the code output with the current parameters</string>
+          </property>
+          <property name="text">
+           <string>Refresh</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
     <item>
