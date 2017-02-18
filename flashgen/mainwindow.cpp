@@ -140,16 +140,28 @@ void MainWindow::updateCode()
 
         QString str2 = QString("%1[%2].").arg(str).arg(QString::number(ctr));
 
-        QString str3 = QString("%1%2 = %3;").arg(str2).arg(chan).arg(flash.channel);
+        bool ok = false;
+        int roundval = ui->cbox_Rounding->currentText().toInt(&ok);
+        if (!ok) {
+            roundval = 1;
+        }
+
+         QString str3 = QString("%1%2 = %3;").arg(str2).arg(chan).arg(flash.channel);
         ui->txt_Output->appendPlainText(str3);
-        str3 = QString("%1%2 = %3;").arg(str2).arg(hold).arg(flash.hold);
+        str3 = QString("%1%2 = %3;").arg(str2).arg(hold).arg(rounding(flash.hold, roundval));
         ui->txt_Output->appendPlainText(str3);
-        str3 = QString("%1%2 = %3;").arg(str2).arg(pause).arg(flash.pause);
+        str3 = QString("%1%2 = %3;").arg(str2).arg(pause).arg(rounding(flash.pause, roundval));
         ui->txt_Output->appendPlainText(str3);
         ui->txt_Output->appendPlainText("");
 
         ctr++;
     }
+}
+
+int MainWindow::rounding(int value, int round) {
+    int retval = (int)( ((float)value + 0.5f) / ((float)round) );
+    retval = retval * round;
+    return retval;
 }
 
 void MainWindow::setNormalControlsEnabled(bool enabled) {
@@ -165,6 +177,7 @@ void MainWindow::setNormalControlsEnabled(bool enabled) {
     ui->txt_flashRoutineVarName->setEnabled(enabled);
     ui->txt_flashVarName->setEnabled(enabled);
     ui->tableView_Routine->setEnabled(enabled);
+    ui->cbox_Rounding->setEnabled(enabled);
 
     ui->btn_Stop->setEnabled(!enabled);
 }

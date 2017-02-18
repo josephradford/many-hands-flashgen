@@ -36,6 +36,7 @@ private:
     bool m_recording;
     void updateCode();
     void setNormalControlsEnabled(bool enabled);
+    int rounding(int value, int round);
 };
 
 #endif // MAINWINDOW_H

@@ -19,6 +19,48 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QFormLayout" name="formLayout_VariableNames">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Flash channel var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="txt_flashChannelVarName">
+          <property name="text">
+           <string>port</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Flash hold var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="txt_flashHoldVarName">
+          <property name="text">
+           <string>hold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Flash pause var name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="txt_flashPauseVarName">
+          <property name="text">
+           <string>pause</string>
+          </property>
+         </widget>
+        </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
@@ -47,66 +89,60 @@
           </property>
          </widget>
         </item>
-        <item row="6" column="0">
+        <item row="5" column="0">
          <widget class="QLabel" name="label_3">
           <property name="text">
            <string>Flash routine index</string>
           </property>
          </widget>
         </item>
-        <item row="6" column="1">
+        <item row="5" column="1">
          <widget class="QLineEdit" name="txt_flashRoutineIdx">
           <property name="text">
            <string>0</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Flash channel var name</string>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="cbox_Rounding">
+          <property name="currentText">
+           <string>100</string>
           </property>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>100</string>
+           </property>
+          </item>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_5">
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>Flash hold var name</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Flash pause var name</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="txt_flashChannelVarName">
-          <property name="text">
-           <string>port</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="txt_flashHoldVarName">
-          <property name="text">
-           <string>hold</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="txt_flashPauseVarName">
-          <property name="text">
-           <string>pause</string>
+           <string>Rounding (ms)</string>
           </property>
          </widget>
         </item>
        </layout>
       </item>
       <item>
-       <widget class="QTableView" name="tableView_Routine"/>
+       <widget class="QTableView" name="tableView_Routine">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
