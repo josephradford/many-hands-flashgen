@@ -28,6 +28,7 @@ public:
     void stopRecording();
 private:
     bool m_keyPressed;
+    bool m_ignoreNextRelease;
     QElapsedTimer *m_timer;
 };
 

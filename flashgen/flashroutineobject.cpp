@@ -5,6 +5,7 @@
 FlashRoutines::FlashRoutines()
 {
     m_keyPressed = false;
+    m_ignoreNextRelease = false;
     m_timer = new QElapsedTimer();
 }
 
@@ -20,6 +21,9 @@ void FlashRoutines::startKeyPress(int key)
         if (flashes.count()) {
             flashes.last().hold = m_timer->elapsed();
             flashes.last().pause = 0;   // no pause, this one was still going
+
+            // if this is the case, then the next key release must be ignored, because the key press ocurred before it
+            m_ignoreNextRelease = true;
         }
     }
     else {
@@ -56,6 +60,11 @@ void FlashRoutines::startKeyPress(int key)
 
 void FlashRoutines::stopKeyPress()
 {
+    if (m_ignoreNextRelease) {
+        m_ignoreNextRelease = false;
+        // it was already handled as two keys were pressed at the same time
+        return;
+    }
     // save the hold time of the current key
     if (m_keyPressed) {
         if (flashes.count()) {
