@@ -34,6 +34,10 @@ void MainWindow::setRecording(bool recording)
 
         // wait for first input
     }
+    else {
+        // finish off the last key
+        m_flashRoutine->stopKeyPress();
+    }
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
