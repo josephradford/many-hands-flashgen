@@ -26,12 +26,15 @@ private slots:
     void on_btn_Record_clicked();
     void on_btn_Stop_clicked();
 
+    void on_btn_Refresh_clicked();
+
 private:
     Ui::MainWindow *ui;
 
     FlashRoutines *m_flashRoutine;
 
     bool m_recording;
+    void updateCode();
 };
 
 #endif // MAINWINDOW_H

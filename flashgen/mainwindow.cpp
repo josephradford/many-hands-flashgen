@@ -37,6 +37,7 @@ void MainWindow::setRecording(bool recording)
     else {
         // finish off the last key
         m_flashRoutine->stopRecording();
+        updateCode();
     }
 }
 
@@ -102,3 +103,43 @@ void MainWindow::on_btn_Stop_clicked()
 {
     setRecording(false);
 }
+
+void MainWindow::on_btn_Refresh_clicked()
+{
+    updateCode();
+}
+
+
+void MainWindow::updateCode()
+{
+    // print out the code as it would be printed out for Arduino
+
+    // clear first
+    ui->txt_Output->clear();
+
+    QString chan = ui->txt_flashChannelVarName->text();
+    QString hold = ui->txt_flashHoldVarName->text();
+    QString pause = ui->txt_flashPauseVarName->text();
+    QString flash = ui->txt_flashVarName->text();
+    QString flashRoutine = ui->txt_flashRoutineVarName->text();
+    QString flashRoutineIdx = ui->txt_flashRoutineIdx->text();
+
+    int ctr = 0;
+
+    QString str = QString("%1[%2].%3").arg(flashRoutine).arg(flashRoutineIdx).arg(flash);
+    foreach (FlashObject flash, m_flashRoutine->flashes) {
+
+        QString str2 = QString("%1[%2].").arg(str).arg(QString::number(ctr));
+
+        QString str3 = QString("%1%2 = %3;").arg(str2).arg(chan).arg(flash.channel);
+        ui->txt_Output->appendPlainText(str3);
+        str3 = QString("%1%2 = %3;").arg(str2).arg(hold).arg(flash.hold);
+        ui->txt_Output->appendPlainText(str3);
+        str3 = QString("%1%2 = %3;").arg(str2).arg(pause).arg(flash.pause);
+        ui->txt_Output->appendPlainText(str3);
+        ui->txt_Output->appendPlainText("");
+
+        ctr++;
+    }
+}
+
